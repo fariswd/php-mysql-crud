@@ -25,17 +25,12 @@ result: {
     {
       "id": "1",
       "title": "learn php",
-      "status": "0"
+      "status": false
     },
     {
       "id": "2",
       "title": "create crud",
-      "status": "0"
-    },
-    {
-      "id": "17",
-      "title": "php is life",
-      "status": "0"
+      "status": false
     }
   ]
 }
@@ -50,7 +45,7 @@ result: {
     {
       "id": "17",
       "title": "php is life",
-      "status": "0"
+      "status": false
     }
   ]
 }

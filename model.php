@@ -24,10 +24,11 @@ function getAll() {
 
     if ($query->num_rows > 0) {
         while($row = $query->fetch_assoc()) {
+            $status = $row['status'] ? true : false;
             $result[$count] = array(
                 'id' =>  $row["id"],
                 'title' => $row["title"],
-                'status' => $row["status"],
+                'status' => $status,
             );
             $count = $count + 1;
         }
@@ -46,10 +47,11 @@ function getDetail($sql) {
 
     if ($query->num_rows > 0) {
         while($row = $query->fetch_assoc()) {
+            $status = $row['status'] ? true : false;
             $result[$count] = array(
                 'id' =>  $row["id"],
                 'title' => $row["title"],
-                'status' => $row["status"],
+                'status' => $status,
             );
             $count = $count + 1;
         }
@@ -88,7 +90,7 @@ function updateTodo($id) {
     $result = array();
 
     if (count($getId)) {
-        $status = $getId['status'] ? false : true;
+        $status = $getId['status'] ? 0 : 1;
         $sql = "UPDATE todo SET status='$status' WHERE id=$id";
         $query = $conn->query($sql);
 

@@ -9,12 +9,12 @@ update model/connect() with your credentials
 ```
 
 ## Endpoint Table
-Endpoint|HTTP|Require|Description
--|-|-|-|-
-/|GET|-|Get all todo
-/|POST|body: {title}|Post a Todo
-/?id|PUT|query:{id}|Update status Todo (Toggle Status)
-/?id|DELETE|query:{id}|Delete Todo 
+Endpoint | HTTP | Require | Description
+--- | --- | --- | ---
+/ | GET | - | Get all todo
+/ | POST | body: {title} | Post a Todo
+/?id | PUT | query:{id} | Update status Todo (Toggle Status)
+/?id | DELETE | query:{id} | Delete Todo 
 
 ## Result Example
 ### GET /
